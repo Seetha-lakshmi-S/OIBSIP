@@ -79,37 +79,44 @@ public class OnlineTrainTicketReservationSystem {
         users.put("user1", "password1");
         users.put("user2", "password2");
 
+        // Set the font size for JOptionPane dialogs
+         UIManager.put("OptionPane.messageFont", new Font("Arial", Font.PLAIN, 16));
+         UIManager.put("OptionPane.buttonFont", new Font("Arial", Font.PLAIN, 16));
+
         frame.setVisible(true);
     }
 
     private void placeComponents(JPanel panel, GridBagConstraints gbc) {
         JLabel userLabel = new JLabel("Username:");
-        userLabel.setFont(new Font("Arial", Font.PLAIN, 18)); // Increased font size
+        userLabel.setFont(new Font("Arial", Font.PLAIN, 18)); 
         userLabel.setForeground(Color.WHITE); // Set font color to white
         panel.add(userLabel, createConstraints(gbc, 0, 0, GridBagConstraints.EAST));
 
         JTextField userText = new JTextField(10);
-        userText.setFont(new Font("Arial", Font.PLAIN, 18)); // Increased font size
+        userText.setFont(new Font("Arial", Font.PLAIN, 18)); 
         panel.add(userText, createConstraints(gbc, 1, 0, GridBagConstraints.WEST));
 
         JLabel passwordLabel = new JLabel("Password:");
-        passwordLabel.setFont(new Font("Arial", Font.PLAIN, 18)); // Increased font size
+        passwordLabel.setFont(new Font("Arial", Font.PLAIN, 18));
         passwordLabel.setForeground(Color.WHITE); // Set font color to white
         panel.add(passwordLabel, createConstraints(gbc, 0, 1, GridBagConstraints.EAST));
 
         passwordField = new JPasswordField(10);
-        passwordField.setFont(new Font("Arial", Font.PLAIN, 18)); // Increased font size
+        passwordField.setFont(new Font("Arial", Font.PLAIN, 18)); 
         panel.add(passwordField, createConstraints(gbc, 1, 1, GridBagConstraints.WEST));
 
         JButton loginButton = new JButton("Login");
+        loginButton.setFont(new Font("Arial", Font.PLAIN, 18)); 
         panel.add(loginButton, createConstraints(gbc, 1, 2, GridBagConstraints.CENTER));
 
         reserveButton = new JButton("Reserve Ticket");
         reserveButton.setVisible(false);
+        reserveButton.setFont(new Font("Arial", Font.PLAIN, 18)); 
         panel.add(reserveButton, createConstraints(gbc, 1, 3, GridBagConstraints.CENTER));
 
         cancelButton = new JButton("Cancel Ticket");
         cancelButton.setVisible(false);
+        cancelButton.setFont(new Font("Arial", Font.PLAIN, 18)); 
         panel.add(cancelButton, createConstraints(gbc, 1, 4, GridBagConstraints.CENTER));
 
         loginButton.addActionListener(new ActionListener() {
@@ -160,36 +167,49 @@ public class OnlineTrainTicketReservationSystem {
         reservationFrame.setLayout(new GridLayout(7, 2));
 
         JLabel nameLabel = new JLabel("Name:");
+        nameLabel.setFont(new Font("Arial", Font.PLAIN, 18)); 
         reservationFrame.add(nameLabel);
         nameField = new JTextField();
+        nameField.setFont(new Font("Arial", Font.PLAIN, 18)); 
         reservationFrame.add(nameField);
 
         JLabel trainNumberLabel = new JLabel("Train Number:");
+        trainNumberLabel.setFont(new Font("Arial", Font.PLAIN, 18)); 
         reservationFrame.add(trainNumberLabel);
         trainNumberField = new JTextField();
+        trainNumberField.setFont(new Font("Arial", Font.PLAIN, 18)); 
         reservationFrame.add(trainNumberField);
 
         JLabel trainNameLabel = new JLabel("Train Name:");
+        trainNameLabel.setFont(new Font("Arial", Font.PLAIN, 18)); 
         reservationFrame.add(trainNameLabel);
         trainNameField = new JTextField();
+        trainNameField.setFont(new Font("Arial", Font.PLAIN, 18)); 
         reservationFrame.add(trainNameField);
 
         JLabel journeyDateLabel = new JLabel("Journey Date:");
+        journeyDateLabel.setFont(new Font("Arial", Font.PLAIN, 18)); 
         reservationFrame.add(journeyDateLabel);
         journeyDateField = new JTextField();
+        journeyDateField.setFont(new Font("Arial", Font.PLAIN, 18)); 
         reservationFrame.add(journeyDateField);
 
         JLabel fromLabel = new JLabel("From:");
+        fromLabel.setFont(new Font("Arial", Font.PLAIN, 18)); 
         reservationFrame.add(fromLabel);
         fromField = new JTextField();
+        fromField.setFont(new Font("Arial", Font.PLAIN, 18)); 
         reservationFrame.add(fromField);
 
         JLabel toLabel = new JLabel("To:");
+        toLabel.setFont(new Font("Arial", Font.PLAIN, 18)); 
         reservationFrame.add(toLabel);
         toField = new JTextField();
+        toField.setFont(new Font("Arial", Font.PLAIN, 18)); 
         reservationFrame.add(toField);
 
         JButton okButton = new JButton("OK");
+        okButton.setFont(new Font("Arial", Font.PLAIN, 18)); 
         reservationFrame.add(okButton);
 
         // Center the reservation form on the screen
@@ -225,11 +245,14 @@ public class OnlineTrainTicketReservationSystem {
         cancelFrame.setLayout(new FlowLayout());
 
         JLabel pnrLabel = new JLabel("Enter PNR to Cancel:");
+        pnrLabel.setFont(new Font("Arial", Font.PLAIN, 18)); 
         cancelFrame.add(pnrLabel);
         cancelPNRField = new JTextField(15);
+        cancelPNRField.setFont(new Font("Arial", Font.PLAIN, 18)); 
         cancelFrame.add(cancelPNRField);
 
         JButton cancelButton = new JButton("Cancel");
+        cancelButton.setFont(new Font("Arial", Font.PLAIN, 18)); 
         cancelFrame.add(cancelButton);
 
         // Center the cancel ticket form on the screen
@@ -269,9 +292,8 @@ public class OnlineTrainTicketReservationSystem {
         SwingUtilities.invokeLater(new Runnable() {
             @Override
             public void run() {
-                new OnlineTrainTicketReservationSystem();
+          new OnlineTrainTicketReservationSystem();
             }
         });
     }
 }
-
