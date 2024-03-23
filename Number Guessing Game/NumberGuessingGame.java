@@ -156,9 +156,9 @@ public class NumberGuessingGame extends JFrame {
             anyRoundGuessedCorrectly = true;
             score++;
             updateScoreLabel();
-            JOptionPane.showMessageDialog(null, "Congratulations! You guessed the number in " + totalAttempts + " attempts", "Correct Guess!", JOptionPane.PLAIN_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Congratulations! You guessed the number in " + totalAttempts + " attempt", "Correct Guess!", JOptionPane.PLAIN_MESSAGE);
         } else if (totalAttempts >= maxAttempts) {
-            JOptionPane.showMessageDialog(null, "You have reached the maximum number of attempts. The correct number was: " + randomNumber, "Attempts Exceeded", JOptionPane.PLAIN_MESSAGE);
+            JOptionPane.showMessageDialog(null, "You have reached the maximum number of attempts.\n The correct number was: " + randomNumber, "Attempts Exceeded", JOptionPane.PLAIN_MESSAGE);
         } else if (guess < randomNumber) {
             JOptionPane.showMessageDialog(null, "Too low! Try again.", "Hint", JOptionPane.INFORMATION_MESSAGE);
         } else {
@@ -188,7 +188,7 @@ public class NumberGuessingGame extends JFrame {
 
     private void displayFinalMessage() {
         if (anyRoundGuessedCorrectly) {
-            JOptionPane.showMessageDialog(null, "Thanks for playing all three rounds! Your score: " + score, "Game Over", JOptionPane.PLAIN_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Thanks for playing all three rounds!\nYour Total score: " + score, "Game Over", JOptionPane.PLAIN_MESSAGE);
         } else {
             JOptionPane.showMessageDialog(null, "Thanks for playing all three rounds! Better luck next time!", "Game Over", JOptionPane.PLAIN_MESSAGE);
         }
